@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  /* display props */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* position props */
+  /* box model props */
+  overflow: hidden;
+  height: 100vh;
+  /* typography  props */
+  font-family: 'Open Sans', sans-serif;
+  background-color: #d3dcea;
+  /* misc */
+}
+
+.title {
+  position: fixed;
+  top: 20px;
+  font-size: 1.8rem;
+}
+
+.countDiv {
+  width: 20%;
+  height: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 7px rgba(0 0 0 / 15%);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+
+  position: absolute;
+  top: -250%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.slidecontainer {
+  width: 20%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #800180;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  border: #800180 solid 1px;
+}
+
+/* Firefox */
+input[type='range']::-moz-range-track {
+  background: purple;
+  border-radius: 4px;
+  width: 100%;
+  height: 13px;
+  cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid purple;
+  margin-top: -7px;
+  cursor: pointer;
+}
